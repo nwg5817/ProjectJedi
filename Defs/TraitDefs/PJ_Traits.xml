@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TraitDefs>
+
+  <TraitDef>
+    <defName>PJ_ForceSensitive</defName>
+    <commonality>0.2</commonality>
+    <degreeDatas>
+      <li>
+        <label>Force Sensitive</label>
+        <description>NAME has the ability to feel the force that surrounds us.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+</TraitDefs>
