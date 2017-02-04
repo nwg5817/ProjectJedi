@@ -37,9 +37,6 @@
       <HintPath>Source-DLLs\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CustomFactionBase">
-      <HintPath>Source-DLLs\CustomFactionBase.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,18 +49,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command_PawnAbility.cs" />
-    <Compile Include="CompAbilityUser.cs" />
+    <Compile Include="AbilityUser\AbilityDef.cs" />
+    <Compile Include="AbilityUser\AbilityDefOf.cs" />
+    <Compile Include="AbilityUser\AbilityPowerManager.cs" />
+    <Compile Include="AbilityUser\Command_PawnAbility.cs" />
+    <Compile Include="AbilityUser\CompAbilityUser.cs" />
+    <Compile Include="AbilityUser\JobDriver_CastAbilitySelf.cs" />
+    <Compile Include="AbilityUser\JobDriver_CastAbilityVerb.cs" />
+    <Compile Include="AbilityUser\PawnAbility.cs" />
+    <Compile Include="AbilityUser\PawnAbilityTargetCategory.cs" />
+    <Compile Include="AbilityUser\ProjectileDef_Ability.cs" />
+    <Compile Include="AbilityUser\Projectile_Ability.cs" />
+    <Compile Include="AbilityUser\Projectile_AbilityLaser.cs" />
+    <Compile Include="AbilityUser\ThingDef_LaserProjectile.cs" />
+    <Compile Include="AbilityUser\VerbProperties_Ability.cs" />
+    <Compile Include="AbilityUser\Verb_UseAbility.cs" />
+    <Compile Include="CompForceUser.cs" />
+    <Compile Include="DamageWorker_ForceHeal.cs" />
     <Compile Include="ForceAbilityDef.cs" />
-    <Compile Include="PawnAbility.cs" />
-    <Compile Include="AbilityDef.cs" />
-    <Compile Include="ForceAlignment.cs" />
-    <Compile Include="PawnAbilityTargetCategory.cs" />
+    <Compile Include="ForceAlignmentType.cs" />
     <Compile Include="Need_ForcePool.cs" />
-    <Compile Include="PawnComponentInjector.cs" />
+    <Compile Include="ModInitializer.cs" />
+    <Compile Include="ProjectJediDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VerbProperties_PawnAbility.cs" />
-    <Compile Include="Verb_CastPawnAbility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,6 +8,15 @@ using Verse;
 namespace ProjectJedi
 {
 
+    public enum ForcePoolCategory
+    {
+        Drained,
+        Feeble,
+        Steady,
+        Strong,
+        Surging
+    }
+
     public class Need_ForcePool : RimWorld.Need
     {
         public const float BaseGainPerTickRate = 150f;
@@ -22,9 +31,33 @@ namespace ProjectJedi
         public int ticksUntilBaseSet = 500;
         private int lastGainTick;
 
+        public ForcePoolCategory CurCategory
+        {
+            get
+            {
+                if (this.CurLevel < 0.01f)
+                {
+                    return ForcePoolCategory.Drained;
+                }
+                if (this.CurLevel < 0.3f)
+                {
+                    return ForcePoolCategory.Feeble;
+                }
+                if (this.CurLevel < 0.5f)
+                {
+                    return ForcePoolCategory.Steady;
+                }
+                if (this.CurLevel < 0.7f)
+                {
+                    return ForcePoolCategory.Strong;
+                }
+                return ForcePoolCategory.Surging;
+            }
+        }
+
         static Need_ForcePool()
         {
-            //ColanderThingDef = DefDatabase<ThingDef>.GetNamed("Apparel_Colander");
+
         }
 
         public override int GUIChangeArrow
@@ -71,6 +104,11 @@ namespace ProjectJedi
             amount = Mathf.Min(amount, 1f - this.CurLevel);
             this.curLevelInt += amount;
             this.lastGainTick = Find.TickManager.TicksGame;
+        }
+
+        public void UseForcePower(float amount)
+        {
+            this.curLevelInt -= Mathf.Min(amount, 1f - this.CurLevel);
         }
 
         public override void NeedInterval()

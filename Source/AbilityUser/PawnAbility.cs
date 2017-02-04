@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 using Verse;
 
-namespace ProjectJedi
+namespace AbilityUser
 {
     public class PawnAbility : ThingWithComps
     {

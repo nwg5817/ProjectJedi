@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+
+<!-- ========== Buttons ========== -->
+
+<ForceAbilityDescAlign>Required Alignment: {0}</ForceAbilityDescAlign>
+<ForceAbilityDescChange>Adjusts Alignment towards the {0} side by {1}</ForceAbilityDescChange>
+<ForceAbilityDescPoints>Force Power: {0}</ForceAbilityDescPoints>
+
+<!-- ========== WARNINGS ========== -->
+
+<WrongAlignment>{0} has the wrong alignment.</WrongAlignment>
+<DrainedForcePool>{0} needs to recover their force powers.</DrainedForcePool>	
+	
+</LanguageData>

@@ -5,8 +5,18 @@ using System.Text;
 
 namespace ProjectJedi
 {
-    class ForceAbilityDef : AbilityDef
+    public class ForceAbilityDef : AbilityUser.AbilityDef
     {
-        public ForceAlignment ForceAlignment = ForceAlignment.None;
+        public float forcePoolCost;
+
+        public bool requiresAlignment = false;
+
+        public ForceAlignmentType requiredAlignmentType;
+
+        public bool changesAlignment = false;
+
+        public ForceAlignmentType changedAlignmentType;
+
+        public float changedAlignmentRate;
     }
 }

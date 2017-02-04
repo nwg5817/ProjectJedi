@@ -7,7 +7,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace ProjectJedi
+namespace AbilityUser
 { 
     /*
         "This class is primarily formed from code made by Cpt. Ohu for his Warhammer 40k mod.
@@ -17,9 +17,9 @@ namespace ProjectJedi
     */
     public class Command_PawnAbility : Command_Target
     {
-        public PawnComponent_AbilityUser compAbilityUser;
+        public CompAbilityUser compAbilityUser;
 
-        public Command_PawnAbility(PawnComponent_AbilityUser compAbilityUser)
+        public Command_PawnAbility(CompAbilityUser compAbilityUser)
         {
             this.compAbilityUser = compAbilityUser;
         }
@@ -37,6 +37,7 @@ namespace ProjectJedi
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft)
         {
+            //Log.ErrorOnce("Command_PawnAbility.GizmoOnGUI Called", 7213123);
             Rect rect = new Rect(topLeft.x, topLeft.y, this.Width, 75f);
             bool flag = false;
             if (Mouse.IsOver(rect))
