@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using AbilityUser;
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,19 @@ using Verse;
 
 namespace ProjectJedi
 { 
+    /*
+     * Special thanks to Erdelf for helping me create and utilize these injectors.
+     * -Jecrell 
+    */
     [StaticConstructorOnStartup]
-    public class PawnComponentInjectorBehavior : MonoBehaviour
+    public class ModInitializer : MonoBehaviour
     {
-        static PawnComponentInjectorBehavior()
+        public static string ModTitle = "ProjectJedi";
+
+        static ModInitializer()
         {
-            GameObject initializer = new UnityEngine.GameObject("PawnAbilityCompInjector");
-            initializer.AddComponent<PawnComponentInjectorBehavior>();
+            GameObject initializer = new UnityEngine.GameObject(ModTitle);
+            initializer.AddComponent<ModInitializer>();
             UnityEngine.Object.DontDestroyOnLoad((UnityEngine.Object)initializer);
         }
 
@@ -27,7 +34,7 @@ namespace ProjectJedi
             {
                 if (Find.TickManager != null)
                 {
-                    if (Find.TickManager.TicksGame > lastTicks + 10)
+                    if (Find.TickManager.TicksGame > lastTicks + 200)
                     {
                         lastTicks = Find.TickManager.TicksGame;
                         reinjectTime -= Time.fixedDeltaTime;
@@ -39,13 +46,16 @@ namespace ProjectJedi
                                 Find.Maps.ForEach(delegate (Map map)
                                 {
                                     List<Pawn> pawns = map.mapPawns.AllPawnsSpawned.Where((Pawn p) => p.story != null).ToList();
-                                    pawns.Where((Pawn p) => p.Name != null && p.TryGetComp<PawnComponent_AbilityUser>() == null &&
-                                            p.story.traits.HasTrait(TraitDef.Named("PJ_ForceUser"))).ToList().ForEach(
+                                    pawns.Where((Pawn p) => p.Name != null && p.TryGetComp<CompForceUser>() == null &&
+                                            (p.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
+                                            p.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait))).ToList().ForEach(
                                         delegate (Pawn p)
                                         {
-                                            PawnComponent_AbilityUser pca = new PawnComponent_AbilityUser();
+                                            Log.Message("CompForceUser Added");
+                                            CompForceUser pca = new CompForceUser();
                                             pca.parent = p;
                                             p.AllComps.Add(pca);
+
                                         });
                                 });
                             }

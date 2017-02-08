@@ -1,2 +1,3 @@
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ProjectJedi\Source\obj\Debug\ProjectJedi.csprojResolveAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ProjectJedi\Source\obj\Debug\CthulhuFactions.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ProjectJedi\Assemblies\ProjectJedi.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ProjectJedi\Source\obj\Debug\ProjectJedi.dll

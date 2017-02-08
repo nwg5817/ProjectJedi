@@ -3,13 +3,73 @@
 
   <TraitDef>
     <defName>PJ_ForceSensitive</defName>
-    <commonality>0.2</commonality>
-    <degreeDatas>
+    <commonality>0.05</commonality>
+    <degreeDatas>	
       <li>
         <label>Force Sensitive</label>
         <description>NAME has the ability to feel the force that surrounds us.</description>
+        <degree>1</degree>		
       </li>
+      <li>
+        <label>Force Apprentice</label>
+        <description>NAME has begun to control the force, but requires further training and guidance.</description>
+		<degree>2</degree>
+      </li>	  	  
     </degreeDatas>
   </TraitDef>
+  
+  <TraitDef>
+    <defName>PJ_JediTrait</defName>
+    <commonality>1.0</commonality>
+    <degreeDatas>	
+      <li>
+        <label>Jedi</label>
+        <description>NAME</description>
+		        <degree>1</degree>
+      </li>
+      <li>
+        <label>Jedi Knight</label>
+        <description>NAME</description>
+		        <degree>2</degree>
+      </li>	  	  
+      <li>
+        <label>Jedi Master</label>
+        <description>NAME</description>
+		        <degree>3</degree>
+      </li>	  	  
+      <li>
+        <label>Jedi Counciller</label>
+        <description>NAME</description>
+		        <degree>4</degree>
+      </li>	  	  
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>PJ_SithTrait</defName>
+    <commonality>1.0</commonality>
+    <degreeDatas>	
+      <li>
+        <label>Sith</label>
+        <description>NAME</description>
+		        <degree>1</degree>
+      </li>
+      <li>
+        <label>Sith Inquisitor</label>
+        <description>NAME</description>
+		        <degree>2</degree>
+      </li>	  	  
+      <li>
+        <label>Sith Master</label>
+        <description>NAME</description>
+		        <degree>3</degree>
+      </li>	  	  
+      <li>
+        <label>Sith Lord</label>
+        <description>NAME</description>
+		        <degree>4</degree>
+      </li>	  	  
+    </degreeDatas>
+  </TraitDef>  
   
 </TraitDefs>

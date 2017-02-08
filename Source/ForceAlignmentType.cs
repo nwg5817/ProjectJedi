@@ -5,11 +5,11 @@ using System.Text;
 
 namespace ProjectJedi
 {
-    public enum ForceAlignment
+    public enum ForceAlignmentType : byte
     {
+        None,
         Light,
         Gray,
-        Dark,
-        None
+        Dark
     }
 }

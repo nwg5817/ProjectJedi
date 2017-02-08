@@ -5,11 +5,15 @@ using System.Linq;
 using System.Text;
 using Verse;
 
-namespace ProjectJedi
+namespace AbilityUser
 {
-    public class VerbProperties_PawnAbility : VerbProperties
+    public class VerbProperties_Ability : VerbProperties
     {
+        public bool isViolent = true;
+
         public bool DrawProjectileOnTarget = true;
+
+        public AbilityDef abilityDef;
 
         public bool AlwaysHits = true;
 
@@ -18,14 +22,17 @@ namespace ProjectJedi
 
         public float AlignmentFactor = 1f;
 
-        public int TicksToRecharge = 600;
+        public float SecondsToRecharge = 10.0f;
         
-        public PawnAbilityTargetCategory PawnAbilityTargetCategory = PawnAbilityTargetCategory.TargetThing;
+        public AbilityTargetCategory AbilityTargetCategory = AbilityTargetCategory.TargetThing;
         public Type AoETargetClass;
 
         public bool ReplacesStandardAttack;
 
         public List<StatModifier> statModifiers;
+        
+        public bool IsDoubleProjectile = false;
+        public ThingDef doubleProjectile;
 
     }
 }
