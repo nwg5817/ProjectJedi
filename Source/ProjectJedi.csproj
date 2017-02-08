@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\Harmony\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>Source-DLLs\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -64,10 +67,14 @@
     <Compile Include="AbilityUser\ThingDef_LaserProjectile.cs" />
     <Compile Include="AbilityUser\VerbProperties_Ability.cs" />
     <Compile Include="AbilityUser\Verb_UseAbility.cs" />
+    <Compile Include="CompActivatableEffect.cs" />
+    <Compile Include="CompEquippedActivatableEffect.cs" />
     <Compile Include="CompForceUser.cs" />
+    <Compile Include="CompProperties_ActivatableEffect.cs" />
     <Compile Include="DamageWorker_ForceHeal.cs" />
     <Compile Include="ForceAbilityDef.cs" />
     <Compile Include="ForceAlignmentType.cs" />
+    <Compile Include="HarmonyProjectJedi.cs" />
     <Compile Include="Need_ForcePool.cs" />
     <Compile Include="ModInitializer.cs" />
     <Compile Include="ProjectJediDefOf.cs" />
