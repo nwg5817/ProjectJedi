@@ -342,6 +342,7 @@ namespace AbilityUser
                 Pawn pawn = hitThing as Pawn;
                 if (pawn != null)
                 {
+                    PostImpactEffects(this.launcher as Pawn, pawn);
                     MoteMaker.ThrowMicroSparks(this.destination, this.Map);
                     MoteMaker.MakeStaticMote(this.destination, this.Map, ThingDefOf.Mote_ShotHit_Dirt, 1f);
                 }
@@ -353,6 +354,16 @@ namespace AbilityUser
                 MoteMaker.MakeStaticMote(this.ExactPosition, this.Map, ThingDefOf.Mote_ShotHit_Dirt, 1f);
                 MoteMaker.ThrowMicroSparks(this.ExactPosition, this.Map);
             }
+        }
+
+        /// <summary>
+        /// JECRELL:: Added this to make derived classes work easily.
+        /// </summary>
+        /// <param name="launcher"></param>
+        /// <param name="hitTarget"></param>
+        public virtual void PostImpactEffects(Pawn launcher, Pawn hitTarget)
+        {
+
         }
 
         /// <summary>

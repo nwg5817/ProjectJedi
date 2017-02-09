@@ -23,6 +23,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -67,18 +69,23 @@
     <Compile Include="AbilityUser\ThingDef_LaserProjectile.cs" />
     <Compile Include="AbilityUser\VerbProperties_Ability.cs" />
     <Compile Include="AbilityUser\Verb_UseAbility.cs" />
-    <Compile Include="CompActivatableEffect.cs" />
-    <Compile Include="CompEquippedActivatableEffect.cs" />
-    <Compile Include="CompForceUser.cs" />
-    <Compile Include="CompProperties_ActivatableEffect.cs" />
-    <Compile Include="DamageWorker_ForceHeal.cs" />
-    <Compile Include="ForceAbilityDef.cs" />
-    <Compile Include="ForceAlignmentType.cs" />
-    <Compile Include="HarmonyProjectJedi.cs" />
-    <Compile Include="Need_ForcePool.cs" />
-    <Compile Include="ModInitializer.cs" />
-    <Compile Include="ProjectJediDefOf.cs" />
+    <Compile Include="CompActivatableEffect\CompActivatableEffect.cs" />
+    <Compile Include="CompExtraSounds\CompExtraSounds.cs" />
+    <Compile Include="CompExtraSounds\CompProperties_ExtraSounds.cs" />
+    <Compile Include="CompExtraSounds\HarmonyCompExtraSounds.cs" />
+    <Compile Include="ProjectJedi\CompForceUser.cs" />
+    <Compile Include="CompActivatableEffect\CompProperties_ActivatableEffect.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
+    <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
+    <Compile Include="ProjectJedi\ForceAlignmentType.cs" />
+    <Compile Include="CompActivatableEffect\HarmonyCompActivatableEffect.cs" />
+    <Compile Include="ProjectJedi\Need_ForcePool.cs" />
+    <Compile Include="ProjectJedi\ModInitializer.cs" />
+    <Compile Include="ProjectJedi\ProjectJediDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CompActivatableEffect\xml\CompActivatableEffect.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
