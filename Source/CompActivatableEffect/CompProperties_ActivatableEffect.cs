@@ -1,7 +1,7 @@
 ﻿using System;
 using Verse;
 
-namespace ProjectJedi
+namespace CompActivatableEffect
 {
     internal class CompProperties_ActivatableEffect : CompProperties
     {
@@ -14,6 +14,9 @@ namespace ProjectJedi
 
         public string uiIconPathActivate;
         public string uiIconPathDeactivate;
+
+        public SoundDef activateSound;
+        public SoundDef deactivateSound;
 
         public bool gizmosOnEquip = false;
 

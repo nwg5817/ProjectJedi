@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
+using Verse.Sound;
 using UnityEngine;
+using Harmony;
 
-namespace ProjectJedi
+namespace CompActivatableEffect
 {
     internal class CompActivatableEffect : CompUseEffect
     {
@@ -116,6 +118,22 @@ namespace ProjectJedi
             }
         }
 
+        public Pawn GetPawn
+        {
+            get
+            {
+                return GetEquippable.verbTracker.PrimaryVerb.CasterPawn;
+            }
+        }
+
+        public List<Verb> GetVerbs
+        {
+            get
+            {
+                return GetEquippable.verbTracker.AllVerbs;
+            }
+        }
+
         public bool GizmosOnEquip
         {
             get
@@ -164,14 +182,30 @@ namespace ProjectJedi
             return false;
         }
 
+        public virtual void PlaySound(SoundDef soundToPlay)
+        {
+            SoundInfo info;
+            if (Props.gizmosOnEquip)
+            {
+                info = SoundInfo.InMap(new TargetInfo(GetPawn.PositionHeld, GetPawn.MapHeld, false), MaintenanceType.None);
+            }
+            else
+            {
+                info = SoundInfo.InMap(new TargetInfo(this.parent.PositionHeld, this.parent.MapHeld, false), MaintenanceType.None);
+            }
+            soundToPlay.PlayOneShot(info);
+        }
+
         public virtual void Activate()
         {
             currentState = State.Activated;
+            if (Props.activateSound != null) PlaySound(Props.activateSound);
             showNow = true;
         }
         public virtual void Deactivate()
         {
             currentState = State.Deactivated;
+            if (Props.deactivateSound != null) PlaySound(Props.deactivateSound);
             showNow = false;
         }
 
@@ -242,5 +276,11 @@ namespace ProjectJedi
             yield break;
         }
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.LookValue<bool>(ref this.showNow, "showNow", false);
+            Scribe_Values.LookValue<State>(ref this.currentState, "currentState", State.Deactivated);
+        }
     }
 }

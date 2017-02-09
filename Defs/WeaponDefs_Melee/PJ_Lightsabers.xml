@@ -96,13 +96,15 @@
 			</recipeUsers>
 		</recipeMaker -->
 		<comps>
-		  <li Class="ProjectJedi.CompProperties_ActivatableEffect">
-			<compClass>ProjectJedi.CompActivatableEffect</compClass>
+		  <li Class="CompActivatableEffect.CompProperties_ActivatableEffect">
+			<compClass>CompActivatableEffect.CompActivatableEffect</compClass>
 			<altitudeLayer>MoteOverhead</altitudeLayer>
 			<ActivateLabel>Activate</ActivateLabel>
 			<uiIconPathActivate>UI/Lightsaber/ActivateSaber</uiIconPathActivate>
 			<DeactivateLabel>Deactivate</DeactivateLabel>
 			<uiIconPathDeactivate>UI/Lightsaber/DeactivateSaber</uiIconPathDeactivate>
+			<activateSound>PJ_LightsaberActivate</activateSound>
+			<deactivateSound>PJ_LightsaberDeactivate</deactivateSound>
 			<gizmosOnEquip>true</gizmosOnEquip>
 			<graphicData>
 				<texPath>Weapons/LightsaberBlade</texPath>
@@ -112,13 +114,20 @@
 				<colorTwo>(155,133,107)</colorTwo>			
 			</graphicData>			
 		  </li>
+		  <li Class="CompExtraSounds.CompProperties_ExtraSounds">
+			<compClass>CompExtraSounds.CompExtraSounds</compClass>
+			<soundMiss>PJ_LightsaberSwing</soundMiss>
+			<soundHitPawn>PJ_LightsaberFleshHit</soundHitPawn>
+			<soundHitBuilding>PJ_LightsaberHit</soundHitBuilding>
+			<soundExtra>PJ_LightsaberDeflect</soundExtra>
+			<soundExtraTwo>PJ_LightsaberBlock</soundExtraTwo>
+		  </li>
 		</comps>
 		<verbs>
 			<li>
 				<verbClass>Verb_MeleeAttack</verbClass>
-				<soundCast>ShotIncendiaryLauncher</soundCast>
 				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>Cut</meleeDamageDef>
+				<meleeDamageDef>PJ_Saber</meleeDamageDef>
 			</li>
 		</verbs>
 	</ThingDef>
