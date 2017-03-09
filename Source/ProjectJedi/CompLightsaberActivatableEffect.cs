@@ -34,7 +34,7 @@ namespace ProjectJedi
             }
             return base.PostGraphicEffects(graphic);
         }
-
+        
         public override bool CanActivate()
         {
             //Log.Message("1");

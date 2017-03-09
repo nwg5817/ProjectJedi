@@ -79,11 +79,11 @@
     </MainVerb>
   </ThingDef>
 
-    <!-- ===================== Force Lightning =============================== -->
+  
   
     <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
-   <defName>PForceLightningProj</defName>
+   <defName>PJ_ForceLightningProj</defName>
    <label>force lightning</label>
    <graphicData>
 		<texPath>Weapons/Projectiles/ForceLightningX</texPath>
@@ -105,7 +105,7 @@
  </ThingDef>
 
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
-    <defName>PJ_Lightning</defName>
+    <defName>PJ_ForceLightning</defName>
     <label>Force Lightning</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
     <description>Lash out with pure dark side energy.</description>
@@ -120,8 +120,8 @@
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceLightningProj</projectileDef>	
-		<abilityDef>PJ_Lightning</abilityDef>
+        <projectileDef>PJ_ForceLightningProj</projectileDef>	
+		<abilityDef>PJ_ForceLightning</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
@@ -136,7 +136,7 @@
 
  
   
-  <!-- ===================== Force Healing Self ============================= -->
+  <!-- ===================== Force Healing ============================= -->
   
     <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceHeal">
    <defName>PForceHeal</defName>
@@ -188,7 +188,5 @@
 		</targetParams>
     </MainVerb>
   </ThingDef>
-  
-  <!-- ===================== Force Heal Target =============================== -->
-  
+
 </ThingDefs>
