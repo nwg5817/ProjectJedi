@@ -34,4 +34,22 @@
 	<armorCategory>Electric</armorCategory>
   </DamageDef>
   
+      <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_FStorm</defName>
+    <label>Force storm</label>
+    <externalViolence>true</externalViolence>
+    <battleWound>true</battleWound>
+    <deathMessage>{0} was caught in a force storm.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Electric</armorCategory>
+    <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+    <explosionCellMote>Mote_BlastEMP</explosionCellMote>
+    <explosionColorEdge>(0.8, 0.7, 1.0, 0.8)</explosionColorEdge>
+    <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
+    <soundExplosion>PJ_LightningSound</soundExplosion>
+  </DamageDef>
+ 
+  
 </Defs>
