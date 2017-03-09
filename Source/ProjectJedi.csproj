@@ -27,9 +27,9 @@
     </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,9 +38,28 @@
     <Reference Include="0Harmony">
       <HintPath>..\..\..\Harmony\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="AbilityUser">
+      <HintPath>..\..\..\CompAbilityUser\Assemblies\AbilityUser.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>Source-DLLs\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="CompActivatableEffect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompActivatableEffect\Assemblies\CompActivatableEffect.dll</HintPath>
+    </Reference>
+    <Reference Include="CompDeflector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompDeflector\Assemblies\CompDeflector.dll</HintPath>
+    </Reference>
+    <Reference Include="CompOversizedWeapon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompOversizedWeapon\Assemblies\CompOversizedWeapon.dll</HintPath>
+    </Reference>
+    <Reference Include="CompSlotLoadable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompSlotLoadable\Assemblies\CompSlotLoadable.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,43 +68,20 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>Source-DLLs\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\RimWorldWin_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbilityUser\AbilityDef.cs" />
-    <Compile Include="AbilityUser\AbilityDefOf.cs" />
-    <Compile Include="AbilityUser\AbilityPowerManager.cs" />
-    <Compile Include="AbilityUser\Command_PawnAbility.cs" />
-    <Compile Include="AbilityUser\CompAbilityUser.cs" />
-    <Compile Include="AbilityUser\JobDriver_CastAbilitySelf.cs" />
-    <Compile Include="AbilityUser\JobDriver_CastAbilityVerb.cs" />
-    <Compile Include="AbilityUser\PawnAbility.cs" />
-    <Compile Include="AbilityUser\PawnAbilityTargetCategory.cs" />
-    <Compile Include="AbilityUser\ProjectileDef_Ability.cs" />
-    <Compile Include="AbilityUser\Projectile_Ability.cs" />
-    <Compile Include="AbilityUser\Projectile_AbilityLaser.cs" />
-    <Compile Include="AbilityUser\ThingDef_LaserProjectile.cs" />
-    <Compile Include="AbilityUser\VerbProperties_Ability.cs" />
-    <Compile Include="AbilityUser\Verb_UseAbility.cs" />
-    <Compile Include="CompActivatableEffect\CompActivatableEffect.cs" />
-    <Compile Include="CompExtraSounds\CompExtraSounds.cs" />
-    <Compile Include="CompExtraSounds\CompProperties_ExtraSounds.cs" />
-    <Compile Include="CompExtraSounds\HarmonyCompExtraSounds.cs" />
     <Compile Include="ProjectJedi\CompForceUser.cs" />
-    <Compile Include="CompActivatableEffect\CompProperties_ActivatableEffect.cs" />
+    <Compile Include="ProjectJedi\CompLightsaberActivatableEffect.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
     <Compile Include="ProjectJedi\ForceAlignmentType.cs" />
-    <Compile Include="CompActivatableEffect\HarmonyCompActivatableEffect.cs" />
     <Compile Include="ProjectJedi\Need_ForcePool.cs" />
     <Compile Include="ProjectJedi\ModInitializer.cs" />
     <Compile Include="ProjectJedi\ProjectJediDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="CompActivatableEffect\xml\CompActivatableEffect.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

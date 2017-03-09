@@ -1,2 +1,0 @@
-# ProjectJedi
-RimWorld Jedi Mod

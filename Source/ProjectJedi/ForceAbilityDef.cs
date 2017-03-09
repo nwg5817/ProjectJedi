@@ -7,16 +7,16 @@ namespace ProjectJedi
 {
     public class ForceAbilityDef : AbilityUser.AbilityDef
     {
-        public float forcePoolCost;
+        public float forcePoolCost; //p
 
         public bool requiresAlignment = false;
 
         public ForceAlignmentType requiredAlignmentType;
-
+        //
         public bool changesAlignment = false;
 
         public ForceAlignmentType changedAlignmentType;
-
+        //
         public float changedAlignmentRate;
     }
 }

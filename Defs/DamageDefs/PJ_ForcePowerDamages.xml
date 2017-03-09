@@ -24,4 +24,14 @@
     <canInterruptJobs>false</canInterruptJobs>
   </DamageDef>
 
+    <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_FLightning</defName>
+    <label>lightning</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<armorCategory>Electric</armorCategory>
+  </DamageDef>
+  
 </Defs>

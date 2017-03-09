@@ -21,5 +21,6 @@ namespace ProjectJedi
 
         public static AbilityDef PJ_ForceHealingSelf;
         public static AbilityDef PJ_ForceDrain;
+        public static AbilityDef PJ_Lightning;
     }
 }
