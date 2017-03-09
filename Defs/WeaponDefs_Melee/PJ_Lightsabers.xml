@@ -149,6 +149,7 @@
 			<soundHitBuilding>PJ_LightsaberHit</soundHitBuilding>
 		  </li>
 		  <li Class="CompSlotLoadable.CompProperties_SlotLoadable">
+		    <compClass>ProjectJedi.CompCrystalSlotLoadable</compClass>
 		    <slots>
 				<li>PJ_KyberCrystalSlot</li>
 			</slots>
@@ -245,6 +246,7 @@
 			<soundHitBuilding>PJ_LightsaberHit</soundHitBuilding>
 		  </li>
 		  <li Class="CompSlotLoadable.CompProperties_SlotLoadable">
+		  <compClass>ProjectJedi.CompCrystalSlotLoadable</compClass>
 		    <slots>
 				<li>PJ_KyberCrystalSlot</li>
 			</slots>
@@ -339,6 +341,7 @@
 			<soundHitBuilding>PJ_KyloHit</soundHitBuilding>
 		  </li>
 		  <li Class="CompSlotLoadable.CompProperties_SlotLoadable">
+		  <compClass>ProjectJedi.CompCrystalSlotLoadable</compClass>
 		    <slots>
 				<li>PJ_KyberCrystalSlot</li>
 			</slots>

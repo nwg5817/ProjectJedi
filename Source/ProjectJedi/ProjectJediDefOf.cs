@@ -19,8 +19,13 @@ namespace ProjectJedi
 
         public static HediffDef PJ_ForceWielderHD;
 
+        //Light Side
         public static AbilityDef PJ_ForceHealingSelf;
+        public static AbilityDef PJ_ForceHealingOther;
+
+        //Dark Side
         public static AbilityDef PJ_ForceDrain;
-        public static AbilityDef PJ_Lightning;
+        public static AbilityDef PJ_ForceLightning;
+        public static AbilityDef PJ_ForceStorm;
     }
 }

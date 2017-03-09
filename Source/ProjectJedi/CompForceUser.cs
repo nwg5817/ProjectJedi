@@ -94,7 +94,7 @@ namespace ProjectJedi
 
                         // !! DEBUG -- TO BE REMOVED LATER !!
                         this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceDrain);
-                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_Lightning);
+                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceLightning);
                     }
                 }
             }
@@ -201,6 +201,8 @@ namespace ProjectJedi
             newDefs.Add(ProjectJediDefOf.PJ_ForceWielderHD);
             return newDefs;
         }
+
+
 
         /// <summary>
         /// This section checks what force abilities were used, and thus their effect on the Jedi's force powers.

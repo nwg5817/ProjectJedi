@@ -5,7 +5,7 @@
 		<defName>PJ_KyberCrystalSlot</defName>
 		<thingClass>CompSlotLoadable.SlotLoadable</thingClass>
 		<Label>Crystal</Label>
-		<description>This kyber crystal slot gives the lightsaber its color.</description>
+		<description>This lightsaber crystal slot gives the lightsaber its color among other effects.</description>
 		<slottableThingDefs>			
 			<li>PJ_UltimaPearl</li>
 			<li>PJ_BlackPearl</li>
