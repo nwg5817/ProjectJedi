@@ -54,6 +54,7 @@
       <PJ_SaberInternal>1</PJ_SaberInternal>
       <PJ_SaberCasing>1</PJ_SaberCasing>
     </costList>
+   <canBeSpawningInventory>false</canBeSpawningInventory>
   </ThingDef>
  
   
