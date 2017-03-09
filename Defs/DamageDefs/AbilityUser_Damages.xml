@@ -2,16 +2,6 @@
 <Defs>
 
   <DamageDef>
-    <defName>PJ_ForceHealDamage</defName>
-    <label>force heal</label>
-    <workerClass>ProjectJedi.DamageWorker_ForceHeal</workerClass>
-    <hasForcefulImpact>false</hasForcefulImpact>
-    <harmsHealth>false</harmsHealth>
-    <makesBlood>false</makesBlood>
-    <canInterruptJobs>false</canInterruptJobs>
-  </DamageDef>
-
-  <DamageDef>
     <defName>Laser</defName>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <label>burn</label>

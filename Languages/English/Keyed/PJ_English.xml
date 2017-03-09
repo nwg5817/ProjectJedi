@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-<!-- ========== CPMPS ============ -->
 
+<!-- ========== COMPS ============ -->
+
+<KyberCrystalRequired>Kyber crystal required</KyberCrystalRequired>
 <Activated>Activate</Activated>
 <Deactivated>Deactivate</Deactivated>
 

@@ -12,7 +12,6 @@
     <deathMessage>{0} has been cut to death.</deathMessage>
     <hediff>PJ_LightsaberEnergy</hediff>
     <impactSoundType>Slice</impactSoundType>
-    <armorCategory>Sharp</armorCategory>
   </DamageDef>
 
   	<HediffDef>
