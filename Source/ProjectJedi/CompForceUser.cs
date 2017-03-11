@@ -87,6 +87,7 @@ namespace ProjectJedi
 
                         // !! DEBUG -- TO BE REMOVED LATER !!
                         this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingSelf);
+                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingOther);
                     }
                     if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait))
                     {
@@ -95,6 +96,7 @@ namespace ProjectJedi
                         // !! DEBUG -- TO BE REMOVED LATER !!
                         this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceDrain);
                         this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceLightning);
+                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceStorm);
                     }
                 }
             }
